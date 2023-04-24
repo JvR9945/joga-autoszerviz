@@ -1,0 +1,43 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  width: 100vw;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./3qmj7oaige168170.jpg');
+  background-position: center;
+  height: 50vh;
+  margin-bottom: 5vh;
+}
+
+.title > h1 {
+  font-size: 5rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.info hr {
+  width: 20%;
+  margin: 10px auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+}
+
+.buttons a {
+  white-space: nowrap;
+  font-size: 1.3rem;
+  padding: 10px 15px;
+  margin: 0 10vw;
+  background-color: #0d05ab;
+  color: white;
+}
+
+.boxes {
+  background-color: pink;
+}
