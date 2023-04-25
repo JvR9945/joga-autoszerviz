@@ -1,3 +1,23 @@
+body {
+  font-size: 1.3rem;
+}
+
+.navbar-container a {
+  margin: 0 10px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
+
+.navbar-container a:hover {
+  background-color: #0d05ab;
+  color: white !important;
+}
+
+a.active {
+  color: white !important;
+  background-color: #0d05ab;
+}
+
 .title {
   display: flex;
   justify-content: center;
@@ -27,6 +47,7 @@
   justify-content: center;
   align-items: center;
   width: min-content;
+  margin-bottom: 10vh;
 }
 
 .buttons a {
@@ -40,4 +61,25 @@
 
 .boxes {
   background-color: pink;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.boxes div {
+  background-color: cyan;
+  border: 3px solid black;
+  padding: 0 30px 30px;
+  width: 40%;
+  text-align: justify;
+}
+
+.boxes div > p:first-child {
+  margin-top: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.boxes hr {
+  border: 1px solid black;
 }
