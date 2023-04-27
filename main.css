@@ -1,7 +1,26 @@
+:root {
+  --primary: #046cdf;
+}
+
 body {
   font-size: 1.2rem;
 }
 
 .navbar {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar-container a {
+  margin: 0 10px;
+  border-radius: 3px;
+}
+
+.navbar-container a:hover {
+  background-color: var(--primary);
+  color: white !important;
+}
+
+a.active {
+  color: white !important;
+  background-color: var(--primary);
 }
