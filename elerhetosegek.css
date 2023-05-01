@@ -1,0 +1,35 @@
+.contact {
+  position: relative;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact div {
+  text-align: center;
+}
+
+.contact div p {
+  margin: 50px 0;
+}
+
+.contact div p a {
+  color: black;
+}
+
+.contact div table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact div table td {
+  border: 1px solid black;
+}
+
+.carousel {
+  margin: 5% auto;
+  width: 50%;
+  height: 500px !important;
+  overflow: hidden;
+}
