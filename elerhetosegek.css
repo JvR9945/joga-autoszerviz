@@ -1,9 +1,10 @@
 .contact {
   position: relative;
-  margin-top: 5%;
+  margin: 8% auto 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around !important;
   align-items: center;
+  width: 95vw !important;
 }
 
 .contact div {

@@ -3,7 +3,7 @@
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 /* NAVBAR */
@@ -13,7 +13,7 @@ body {
   top: 0;
   width: 100vw;
   z-index: 99;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border-bottom: 1px solid gray;
 }
 
@@ -29,6 +29,8 @@ a.active {
   color: white !important;
 }
 
+/* FOOTER */
+
 footer {
   display: flex;
   justify-content: space-around;
@@ -43,8 +45,6 @@ footer div {
   text-align: center;
 }
 
-/* FOOTER */
-
 footer div p {
   margin: 0;
 }
@@ -57,9 +57,11 @@ footer a:hover {
   color: white;
 }
 
+/* BUTTON */
+
 .custom-button {
   white-space: nowrap;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding: 10px 15px;
   margin: 0 10vw;
   background-color: var(--primary);
