@@ -1,5 +1,12 @@
-p#title {
-  margin: 8% 0 5% 3%;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+h1#title {
+  margin: 6% 0 0 3%;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -24,22 +31,23 @@ p#title {
   text-align: center;
 }
 
-.flex table tr td {
+.flex table tr td,
+.flex table tr th {
   border: 1px solid black;
+}
+
+.flex table tr th {
+  background-color: var(--primary);
+  color: white;
 }
 
 .flex div#info {
   border: 3px solid black;
   padding: 30px;
+  border-radius: 10px;
 }
 
 .flex div#info ul li {
   margin: 30px 0;
   list-style-type: none;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
 }

@@ -33,10 +33,13 @@
     </nav>
 
     <div class="contact">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2671.9186268716953!2d21.6931285!3d47.9572976!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47389f8c998ce839%3A0xd65ec0da18885db6!2zSsOzLUdhIEF1dMOzc3plcnZpeg!5e0!3m2!1sen!2shu!4v1679485206229!5m2!1sen!2shu"
-            width="800" height="550" style="border: 1px solid black;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="iframe-container">
+            <div class="loading" id="loading">Betöltés...</div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2671.9186268716953!2d21.6931285!3d47.9572976!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47389f8c998ce839%3A0xd65ec0da18885db6!2zSsOzLUdhIEF1dMOzc3plcnZpeg!5e0!3m2!1sen!2shu!4v1679485206229!5m2!1sen!2shu"
+                width="650" height="550" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                id="iframe" style="opacity: 0;"></iframe>
+        </div>
         <div>
             <p>4400 Nyíregyháza Tiszavasvári út 15.</p>
             <p>+36-42/420-763</p>
@@ -45,7 +48,7 @@
             <a href="https://www.google.com/maps/dir//Ny%C3%ADregyh%C3%A1za,+J%C3%B3-Ga+Aut%C3%B3szerviz,+Tiszavasv%C3%A1ri+%C3%BAt+15,+4400/@47.9572976,21.6931285,17z/data=!4m17!1m7!3m6!1s0x47389f8c998ce839:0xd65ec0da18885db6!2zSsOzLUdhIEF1dMOzc3plcnZpeg!8m2!3d47.9572976!4d21.6931285!16s%2Fg%2F11b6h_sy1k!4m8!1m0!1m5!1m1!1s0x47389f8c998ce839:0xd65ec0da18885db6!2m2!1d21.6931285!2d47.9572976!3e3"
                 target="_blank" class="btn custom-button">Útvonaltervezés</a>
         </div>
-        <div>
+        <div class="table-container">
             <table>
                 <caption>
                     <strong>Nyitvatartás</strong>
@@ -116,17 +119,32 @@
 
     <footer>
         <div>
-            <p>4400 Nyíregyháza, Tiszavasvári út 15.</p> <br>
+            <p>4400 Nyíregyháza, Tiszavasvári út 15.</p>
             <p>+36-42/420-763 | +36-30/5010-555</p>
         </div>
         <div>
-            <p><strong>2023 &middot; Jó-Ga Autószerviz</strong></p>
+            <p><strong><span id="date"></span> &middot; Jó-Ga Autószerviz</strong></p>
         </div>
         <div>
             <p><a href="https://www.facebook.com/jogaautoszerviz/" target="_blank">Facebook</a></p>
             <p><a href="https://goo.gl/maps/9M96TFUdApp22YWXA" target="_blank">Google</a></p>
         </div>
     </footer>
+    <script>
+        document.getElementById("date").textContent = new Date().getFullYear();
+    </script>
+    <script>
+        const iframeEle = document.getElementById('iframe');
+        const loadingEle = document.getElementById('loading');
+
+        iframeEle.addEventListener('load', function () {
+            // Hide the loading indicator
+            loadingEle.style.display = 'none';
+
+            // Bring the iframe back
+            iframeEle.style.opacity = 1;
+        }); 
+    </script>
 </body>
 
 </html>
