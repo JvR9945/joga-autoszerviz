@@ -93,10 +93,12 @@
         const date = new Date();
         const day = date.getDay();
         const hour = date.getHours();
-        let result = "asd";
+        let result = "";
 
-        if (day == 6 || day == 7 || day == 5 && hour == 16) result = "Jelenleg zárva vagyunk! Nyitás: Hétfő 8:00.";
+        if (day == 6 || day == 7 || day == 5 && hour >= 16) result = "Jelenleg zárva vagyunk! Nyitás: Hétfő 8:00.";
         else if (hour >= 16 && hour <= 23) result = "Jelenleg zárva vagyunk! Nyitás: Holnap 8:00.";
+        else if (hour >= 0 && hour <= 7) result = "Jelenleg zárva vagyunk! Nyitás: Ma 8:00.";
+        else result = "Jelenleg nyitva vagyunk! Zárás: 16:00.";
 
         document.getElementById("opens").textContent = result;
     </script>
