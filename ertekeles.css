@@ -3,6 +3,13 @@ h1#title {
   font-size: 2rem;
 }
 
+main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 .flex {
   width: 90%;
   display: flex;
@@ -11,20 +18,35 @@ h1#title {
   margin-bottom: 50px;
 }
 
-.flex > div {
-  min-width: 50%;
+.form {
+  width: 40%;
 }
 
-.flex2 {
-  padding: 0 100px 0;
+#buttons {
+  margin-top: 30px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+#info {
+  width: 40%;
   text-align: justify;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.flex2 div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.flex input:not([type='submit']),
+.flex textarea {
+  border: 1px solid black;
+}
+
+input[type='radio']:checked,
+input[type='checkbox']:checked {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  cursor: pointer;
 }

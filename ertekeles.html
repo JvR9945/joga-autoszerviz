@@ -16,104 +16,129 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
-        <a class="navbar-brand" href="#"><img src="media/logo.png" alt="logo" width="100px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav text-right me-5 ms-auto navbar-container">
-                <a class="nav-item nav-link" href="./index.html">Kezdőlap</a>
-                <a class="nav-item nav-link" href="./elerhetosegek.html">Elérhetőségek</a>
-                <a class="nav-item nav-link" href="./arlista.html">Árlista</a>
-                <a class="nav-item nav-link active" href="#">Értékelés</a>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+            <a class="navbar-brand" href="#"><img src="media/logo.png" alt="logo" width="100px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav text-right me-5 ms-auto navbar-container">
+                    <a class="nav-item nav-link" href="./index.html">Kezdőlap</a>
+                    <a class="nav-item nav-link" href="./elerhetosegek.html">Elérhetőségek</a>
+                    <a class="nav-item nav-link" href="./arlista.html">Árlista</a>
+                    <a class="nav-item nav-link active" href="#">Értékelés</a>
+                </div>
+            </div>
+        </nav>
+
+        <h1 id="title">Értékeljen minket!</h1>
+
+
+        <div class="flex">
+            <div class="form">
+                <div class="mb-3">
+                    <label for="formdate" class="form-label">Dátum</label>
+                    <input type="text" class="form-control" id="formdate" name="datum" maxlength="30"
+                        placeholder="Pl.: 1970.01.01">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Teljes név (opcionális)</label>
+                    <input type="text" class="form-control" id="name" name="teljesnev" maxlength="50">
+                </div>
+                <p>Mennyire volt elégedett?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="elegedett" id="r1" value="1">
+                    <label class="form-check-label" for="r1">
+                        Egyáltalán nem
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="elegedett" id="r2" value="2">
+                    <label class="form-check-label" for="r2">
+                        Többnyire nem
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="elegedett" id="r3" value="3">
+                    <label class="form-check-label" for="r3">
+                        Átlagosan
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="elegedett" id="r4" value="4">
+                    <label class="form-check-label" for="r4">
+                        Többnyire igen
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="elegedett" id="r5" value="5">
+                    <label class="form-check-label" for="r5">
+                        Teljes mértékben
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="check">
+                    <label class="form-check-label" for="check">
+                        Ajánlanám a szervizt másoknak.
+                    </label>
+                </div>
+                <div class="mb-3">
+                    <label for="textarea" class="form-label">Írja le véleményét, panaszát,
+                        észrevételét!</label>
+                    <textarea class="form-control" id="textarea" rows="5" maxlength="1000" name="velemeny"></textarea>
+                </div>
+                <div id="buttons">
+                    <button onclick="sendEmail()" class="btn custom-button">Küldés</button>
+                    <input type="submit" value="Küldés" class="btn custom-button">
+                </div>
+            </div>
+
+            <div id="info">
+                <p>Ezen az oldalon elküldheti észrevételeit, véleményét, panaszát vagy üzenetét műhelyünk számára.
+                    Köszönjük!</p>
             </div>
         </div>
-    </nav>
 
-    <h1 id="title">Értékeljen minket!</h1>
-
-    <div class="flex">
-        <div>
-            <div class="mb-3">
-                <label for="formdate" class="form-label">Dátum</label>
-                <input type="text" class="form-control" id="formdate" name="datum" maxlength="30"
-                    placeholder="Pl.: 1970.01.01">
-            </div>
-            <div class="mb-3">
-                <label for="name" class="form-label">Teljes név (opcionális)</label>
-                <input type="text" class="form-control" id="name" name="teljesnev" maxlength="50">
-            </div>
-            <p>Mennyire volt elégedett?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="elegedett" id="r1" value="1">
-                <label class="form-check-label" for="r1">
-                    Egyáltalán nem
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="elegedett" id="r2" value="2">
-                <label class="form-check-label" for="r2">
-                    Többnyire nem
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="elegedett" id="r3" value="3">
-                <label class="form-check-label" for="r3">
-                    Átlagosan
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="elegedett" id="r4" value="4">
-                <label class="form-check-label" for="r4">
-                    Többnyire igen
-                </label>
-            </div>
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" name="elegedett" id="r5" value="5">
-                <label class="form-check-label" for="r5">
-                    Teljes mértékben
-                </label>
-            </div>
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" value="" id="ajanlas">
-                <label class="form-check-label" for="ajanlas">
-                    Ajánlanám a szervizt másoknak.
-                </label>
-            </div>
-            <div class="mb-3">
-                <label for="hosszuvelemeny" class="form-label">Írja le véleményét, panaszát,
-                    észrevételét!</label>
-                <textarea class="form-control" id="hosszuvelemeny" rows="5" maxlength="1000" name="velemeny"></textarea>
-            </div>
-        </div>
-
-        <div class="flex2">
-            <p>Ezen az oldalon elküldheti észrevételeit, véleményét, panaszát vagy üzenetét műhelyünk számára.
-                Köszönjük!</p>
+        <footer>
             <div>
-                <a href="mailto:joga.szerviz@gmail.com" class="btn custom-button">Küldés</a>
-                <a href="" class="btn custom-button">Törlés</a>
+                <p>4400 Nyíregyháza, Tiszavasvári út 15.</p>
+                <p>+36-42/420-763 | +36-30/5010-555</p>
             </div>
-        </div>
-    </div>
-
-    <footer>
-        <div>
-            <p>4400 Nyíregyháza, Tiszavasvári út 15.</p>
-            <p>+36-42/420-763 | +36-30/5010-555</p>
-        </div>
-        <div>
-            <p><strong> <span id="date"></span> &middot; Jó-Ga Autószerviz</strong></p>
-        </div>
-        <div>
-            <p><a href="https://www.facebook.com/jogaautoszerviz/" target="_blank">Facebook</a></p>
-            <p><a href="https://goo.gl/maps/9M96TFUdApp22YWXA" target="_blank">Google</a></p>
-        </div>
-    </footer>
+            <div>
+                <p><strong> <span id="date"></span> &middot; Jó-Ga Autószerviz</strong></p>
+            </div>
+            <div>
+                <p><a href="https://www.facebook.com/jogaautoszerviz/" target="_blank">Facebook</a></p>
+                <p><a href="https://goo.gl/maps/9M96TFUdApp22YWXA" target="_blank">Google</a></p>
+            </div>
+        </footer>
+    </main>
     <script>
         document.getElementById("date").textContent = new Date().getFullYear();
+
+        function sendEmail() {
+            const datum = document.getElementById('formdate').value;
+            const name = document.getElementById('name').value;
+            const textarea = document.getElementById('textarea').value;
+            const radioButtons = document.getElementsByName('radio');
+            const agree = document.getElementById('check').value;
+
+            let option = "";
+            for (let i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    option = radioButtons[i].value;
+                    break;
+                }
+            }
+
+            const subject = "Levél a szerviznek.";
+            const body = `Név: ${name}\n Dátum: ${date}`;
+            const mailtoLink = `mailto:joga.szerviz@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+            window.location.href = mailtoLink;
+        }
     </script>
 </body>
 

@@ -60,6 +60,10 @@
   margin-right: 3%;
 }
 
+.boxes p.more a {
+  color: black;
+}
+
 #video {
   width: 40%;
   display: block;
