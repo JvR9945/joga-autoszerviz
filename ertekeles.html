@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="ertekeles.css">
     <title>Értékelés</title>
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="J&oacute;-Ga Aut&oacute;szerviz">
+    <meta name="application-name" content="J&oacute;-Ga Aut&oacute;szerviz">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <!-- /FAVICON -->
 </head>
 
 <body>
@@ -37,7 +49,7 @@
 
 
         <div class="flex">
-            <div class="form">
+            <form action="">
                 <div class="mb-3">
                     <label for="formdate" class="form-label">Dátum</label>
                     <input type="text" class="form-control" id="formdate" name="datum" maxlength="30"
@@ -93,11 +105,13 @@
                     <button onclick="sendEmail()" class="btn custom-button">Küldés</button>
                     <button onclick="clearForm()" class="btn custom-button">Törlés</button>
                 </div>
-            </div>
+            </form>
 
             <div id="info">
-                <p>Ezen az oldalon elküldheti észrevételeit, véleményét, panaszát vagy üzenetét műhelyünk számára.
-                    Köszönjük!</p>
+                <aside>
+                    <p>Ezen az oldalon elküldheti észrevételeit, véleményét, panaszát vagy üzenetét műhelyünk számára.
+                        Köszönjük!</p>
+                </aside>
             </div>
         </div>
 

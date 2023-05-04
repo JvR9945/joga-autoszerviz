@@ -37,7 +37,8 @@
   flex-wrap: wrap;
 }
 
-.boxes div {
+.boxes div,
+.boxes article {
   border: 3px solid black;
   padding: 0 30px 30px;
   width: 45%;
@@ -45,7 +46,8 @@
   border-radius: 10px;
 }
 
-.boxes div > p:first-child {
+.boxes div > p:first-child,
+.boxes article header p {
   margin-top: 0;
   font-weight: bold;
   text-align: center;
