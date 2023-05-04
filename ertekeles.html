@@ -91,7 +91,7 @@
                 </div>
                 <div id="buttons">
                     <button onclick="sendEmail()" class="btn custom-button">Küldés</button>
-                    <input type="submit" value="Küldés" class="btn custom-button">
+                    <button onclick="clearForm()" class="btn custom-button">Törlés</button>
                 </div>
             </div>
 
@@ -119,11 +119,11 @@
         document.getElementById("date").textContent = new Date().getFullYear();
 
         function sendEmail() {
-            const datum = document.getElementById('formdate').value;
+            const date = document.getElementById('formdate').value;
             const name = document.getElementById('name').value;
+            const radioButtons = document.getElementsByName('elegedett');
+            let check = document.getElementById('check').checked;
             const textarea = document.getElementById('textarea').value;
-            const radioButtons = document.getElementsByName('radio');
-            const agree = document.getElementById('check').value;
 
             let option = "";
             for (let i = 0; i < radioButtons.length; i++) {
@@ -133,11 +133,24 @@
                 }
             }
 
-            const subject = "Levél a szerviznek.";
-            const body = `Név: ${name}\n Dátum: ${date}`;
+            if (check) check = "Igen";
+            else check = "Nem";
+
+            const subject = "Ügyfél értékelés";
+            const body = `Név: ${name}\nDátum: ${date}\nElégedettség: ${option}\nAjánlás: ${check}\nÜzenet:\n${textarea}`;
             const mailtoLink = `mailto:joga.szerviz@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-            window.location.href = mailtoLink;
+            window.open(mailtoLink, '_blank');
+            clearForm();
+        }
+
+        function clearForm() {
+            document.getElementById('formdate').value = "";
+            document.getElementById('name').value = "";
+            const radios = document.getElementsByName('elegedett');
+            for (let i = 0; i < radios.length; i++) radios[i].checked = false;
+            document.getElementById('check').checked = false;
+            document.getElementById('textarea').value = "";
         }
     </script>
 </body>

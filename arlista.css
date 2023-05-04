@@ -15,7 +15,7 @@ h1#title {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   width: 80%;
   margin: 0 auto;
   gap: 0 300px;
