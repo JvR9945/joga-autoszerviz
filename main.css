@@ -18,6 +18,19 @@ table caption {
   caption-side: top;
 }
 
+a#link {
+  color: black;
+}
+
+a#link:hover {
+  font-weight: bold;
+}
+
+a#link:visited,
+a#link:active {
+  color: var(--primary);
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -70,6 +83,10 @@ footer a:hover {
   color: white;
 }
 
+footer a#icon {
+  margin: 0 20px;
+}
+
 /* BUTTON */
 
 .custom-button {
@@ -84,7 +101,15 @@ footer a:hover {
 }
 
 .custom-button:hover {
+  border: 2px solid var(--primary) !important;
+  color: var(--primary) !important;
+  background-color: white !important;
+  font-weight: 400;
+}
+
+.custom-button:visited,
+.custom-button:active {
+  background-color: var(--primary);
   border: 2px solid var(--primary);
-  color: var(--primary);
-  background-color: white;
+  color: white;
 }

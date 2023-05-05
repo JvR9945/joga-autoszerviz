@@ -9,7 +9,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="index.css">
-    <title>Kezdőlap</title>
+    <title>Jó-Ga Kezdőlap</title>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -58,10 +58,12 @@
             <header>
                 <p>TÁJÉKOZTATÓ</p>
             </header>
-            <p id="disc">Személyautók, és kis tehergépjárművek futómű beállítása, ellenőrzése telefonos egyeztetés után.
-                Aktuális
-                információkért látogasson el Facebook oldalunkra! Felhívjuk kedves ügyfeleink figyelmét, hogy
-                műhelyünkben kizárólag készpénzes fizetés lehetséges!” </p>
+            <p id="disc">Személyautók, és kis tehergépjárművek futómű beállítása.</p>
+            <p>Aktuális információkért látogasson el Facebook oldalunkra!</p>
+            <p>Felhívjuk kedves ügyfeleink figyelmét, hogy műhelyünkben kizárólag <strong>készpénzes fizetés</strong>
+                lehetséges!</p>
+            <p>Időpontegyeztetés kizárólag <strong>telefonon</strong> lehetséges! Bővebb információ az <a
+                    href="./elerhetosegek.html" id="link">Elérhetőségek</a> oldalon.</p>
 
         </article>
         <div>
@@ -84,15 +86,17 @@
         </div>
         <p class="more">Forrás: Google. <a
                 href="https://www.google.com/maps/place/J%C3%B3-Ga+Aut%C3%B3szerviz/@47.9572976,21.6931285,17z/data=!4m8!3m7!1s0x47389f8c998ce839:0xd65ec0da18885db6!8m2!3d47.9572976!4d21.6931285!9m1!1b1!16s%2Fg%2F11b6h_sy1k"
-                target="_blank">Több megtekintése</a></p>
+                target="_blank" id="link">Több megtekintése</a></p>
     </div>
 
-    <video controls poster="media/thumb.png" id="video">
-        <source src="media/sample.mp4" type="video/mp4">
-        <p>A böngészője nem támogatja a videóállomány HTML5 szerinti beágyazott lejátszását.</p>
-        <p><a href="media/sample.mp4">A példa állományt letöltheti mp4 formátumban.</a></p>
-
-    </video>
+    <div id="video">
+        <video controls poster="media/video_thumb.png">
+            <source src="media/joga-video.mp4" type="video/mp4">
+            <p>A böngészője nem támogatja a videóállomány HTML5 szerinti beágyazott lejátszását.</p>
+            <p><a href="media/joga-video.mp4">A példa állományt letöltheti mp4 formátumban.</a></p>
+        </video>
+        <p><a href="./video.html" id="link" target="_blank">A videó hosszú leírása</a></p>
+    </div>
 
     <footer>
         <div>
@@ -103,8 +107,10 @@
             <p><strong> <span id="date"></span> &middot; Jó-Ga Autószerviz</strong></p>
         </div>
         <div>
-            <p><a href="https://www.facebook.com/jogaautoszerviz/" target="_blank">Facebook</a></p>
-            <p><a href="https://goo.gl/maps/9M96TFUdApp22YWXA" target="_blank">Google</a></p>
+            <a href="https://www.facebook.com/jogaautoszerviz/" target="_blank" id="icon"><ion-icon name="logo-facebook"
+                    size="large" aria-label="Facebook" title="Facebook"></ion-icon></a>
+            <a href="https://goo.gl/maps/9M96TFUdApp22YWXA" target="_blank" title="Google"><ion-icon name="logo-google"
+                    size="large" aria-label="Google" id="icon"></ion-icon></a>
         </div>
     </footer>
     <script>
@@ -123,6 +129,8 @@
 
         document.getElementById("opens").textContent = result;
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

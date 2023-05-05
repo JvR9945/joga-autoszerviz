@@ -9,7 +9,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="elerhetosegek.css">
-    <title>Elérhetőségek</title>
+    <title>Jó-Ga Elérhetőségek</title>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -29,7 +29,7 @@
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
-        <a class="navbar-brand" href="#"><img src="media//logo.png" alt="logo" width="100px"></a>
+        <a class="navbar-brand" href="./index.html"><img src="media//logo.png" alt="logo" width="100px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@
             <p>4400 Nyíregyháza Tiszavasvári út 15.</p>
             <p>+36-42/420-763</p>
             <p>+36-30/5010-555</p>
-            <p><a href="https://www.facebook.com/jogaautoszerviz/" target="_blank">Facebook</a></p>
+            <p><a href="https://www.facebook.com/jogaautoszerviz/" target="_blank" id="link">Facebook</a></p>
             <a href="https://www.google.com/maps/dir//Ny%C3%ADregyh%C3%A1za,+J%C3%B3-Ga+Aut%C3%B3szerviz,+Tiszavasv%C3%A1ri+%C3%BAt+15,+4400/@47.9572976,21.6931285,17z/data=!4m17!1m7!3m6!1s0x47389f8c998ce839:0xd65ec0da18885db6!2zSsOzLUdhIEF1dMOzc3plcnZpeg!8m2!3d47.9572976!4d21.6931285!16s%2Fg%2F11b6h_sy1k!4m8!1m0!1m5!1m1!1s0x47389f8c998ce839:0xd65ec0da18885db6!2m2!1d21.6931285!2d47.9572976!3e3"
                 target="_blank" class="btn custom-button">Útvonaltervezés</a>
         </div>
@@ -140,25 +140,24 @@
             <p><strong><span id="date"></span> &middot; Jó-Ga Autószerviz</strong></p>
         </div>
         <div>
-            <p><a href="https://www.facebook.com/jogaautoszerviz/" target="_blank">Facebook</a></p>
-            <p><a href="https://goo.gl/maps/9M96TFUdApp22YWXA" target="_blank">Google</a></p>
+            <a href="https://www.facebook.com/jogaautoszerviz/" target="_blank" id="icon"><ion-icon name="logo-facebook"
+                    size="large" aria-label="Facebook" title="Facebook"></ion-icon></a>
+            <a href="https://goo.gl/maps/9M96TFUdApp22YWXA" target="_blank" title="Google"><ion-icon name="logo-google"
+                    size="large" aria-label="Google" id="icon"></ion-icon></a>
         </div>
     </footer>
     <script>
         document.getElementById("date").textContent = new Date().getFullYear();
-    </script>
-    <script>
+
         const iframeEle = document.getElementById('iframe');
         const loadingEle = document.getElementById('loading');
-
         iframeEle.addEventListener('load', function () {
-            // Hide the loading indicator
             loadingEle.style.display = 'none';
-
-            // Bring the iframe back
             iframeEle.style.opacity = 1;
         }); 
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

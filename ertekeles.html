@@ -9,7 +9,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="ertekeles.css">
-    <title>Értékelés</title>
+    <title>Jó-Ga Értékelés</title>
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -30,7 +30,7 @@
         crossorigin="anonymous"></script>
     <main>
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
-            <a class="navbar-brand" href="#"><img src="media/logo.png" alt="logo" width="100px"></a>
+            <a class="navbar-brand" href="./index.html"><img src="media/logo.png" alt="logo" width="100px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -110,7 +110,8 @@
             <div id="info">
                 <aside>
                     <p>Ezen az oldalon elküldheti észrevételeit, véleményét, panaszát vagy üzenetét műhelyünk számára.
-                        Köszönjük!</p>
+                        <i>Köszönjük!</i>
+                    </p>
                 </aside>
             </div>
         </div>
@@ -124,8 +125,10 @@
                 <p><strong> <span id="date"></span> &middot; Jó-Ga Autószerviz</strong></p>
             </div>
             <div>
-                <p><a href="https://www.facebook.com/jogaautoszerviz/" target="_blank">Facebook</a></p>
-                <p><a href="https://goo.gl/maps/9M96TFUdApp22YWXA" target="_blank">Google</a></p>
+                <a href="https://www.facebook.com/jogaautoszerviz/" target="_blank" id="icon"><ion-icon
+                        name="logo-facebook" size="large" aria-label="Facebook" title="Facebook"></ion-icon></a>
+                <a href="https://goo.gl/maps/9M96TFUdApp22YWXA" target="_blank" title="Google"><ion-icon
+                        name="logo-google" size="large" aria-label="Google" id="icon"></ion-icon></a>
             </div>
         </footer>
     </main>
@@ -167,6 +170,8 @@
             document.getElementById('textarea').value = "";
         }
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
