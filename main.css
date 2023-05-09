@@ -42,6 +42,10 @@ a#link:active {
   border-bottom: 1px solid gray;
 }
 
+.navbar-collapse {
+  z-index: 9999;
+}
+
 .navbar-brand {
   margin-left: 10px;
 }
@@ -171,6 +175,11 @@ footer a#icon {
   footer {
     height: 150px;
     flex-flow: column wrap;
+  }
+
+  .navbar-collapse a {
+    padding: 15px 0;
+    text-align: center;
   }
 }
 
