@@ -52,3 +52,53 @@
 .table-container {
   width: 350px !important;
 }
+
+@media print {
+  .carousel {
+    display: none;
+  }
+
+  .iframe-container iframe {
+    display: none;
+  }
+
+  .table-container {
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  .contact {
+    flex-flow: column wrap;
+    margin-top: 100px;
+  }
+
+  .iframe-container iframe {
+    width: 350px;
+  }
+
+  .iframe-container {
+    margin-bottom: 30px;
+  }
+
+  .carousel {
+    width: 90%;
+    height: 300px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1200px) {
+  .contact {
+    flex-flow: column wrap;
+  }
+
+  .iframe-container {
+    margin-bottom: 30px;
+  }
+
+  .carousel {
+    width: 80%;
+    height: 500px !important;
+  }
+}

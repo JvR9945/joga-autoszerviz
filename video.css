@@ -15,3 +15,13 @@
   border-left: 2px solid black;
   padding: 30px;
 }
+
+@media (min-width: 0px) and (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+
+  .disc-wrapper {
+    padding: 15px;
+  }
+}

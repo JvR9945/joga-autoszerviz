@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: pink;
   width: 100vw;
   left: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('media/landing.jpg');
@@ -78,4 +77,74 @@
   height: 100%;
   width: 100%;
   border-radius: 10px;
+}
+
+@media print {
+  body * {
+    text-align: left;
+  }
+
+  div.title {
+    margin: 50px 0 10px 0;
+    height: 0;
+  }
+
+  div.title h1 {
+    font-size: 1.5rem;
+  }
+
+  #info {
+    text-align: left;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .boxes {
+    flex-flow: column wrap;
+    width: 100vw;
+    border: none;
+    margin-left: 0;
+  }
+
+  .boxes div,
+  .boxes article {
+    width: 100vw;
+  }
+
+  .more {
+    display: none;
+  }
+
+  #video {
+    display: none;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  .title > h1 {
+    font-size: 3rem;
+  }
+
+  .buttons {
+    flex-flow: column wrap;
+    gap: 10px 0;
+  }
+
+  .boxes {
+    flex-flow: column wrap;
+    width: 95vw;
+    gap: 10px 0;
+  }
+
+  .boxes div,
+  .boxes article {
+    width: 100%;
+  }
+
+  #video {
+    width: 95%;
+    margin: 20px auto;
+  }
 }
