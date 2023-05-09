@@ -1,6 +1,6 @@
 .container {
   width: 60%;
-  margin-top: 3%;
+  margin: 3% auto 0;
 }
 
 .container h3 {
